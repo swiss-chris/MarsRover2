@@ -22,6 +22,10 @@ export const isValidInstructions = instructionsString =>
 export const isValidSize = sizeString => sizeString.match(sizeMatcher) != null;
 
 export const isValidStartAndSize = (startString, sizeString) => {
+  if (!isValidStart(startString) || !isValidSize(sizeString)) {
+    return false;
+  }
+
   const start = extractStart(startString);
   const size = extractSize(sizeString);
 

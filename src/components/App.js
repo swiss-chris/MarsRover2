@@ -11,9 +11,9 @@ class App extends Component {
       rovers: [
         { position: "1 2 N", instructions: "LMLMLMLMM" },
         { position: "3 3 E", instructions: "MMRMMRMRRM" },
-        { position: "3 2 W", instructions: "LMRMLM" },
-        { position: "3 3 N", instructions: "M" },
-        { position: "", instructions: "" },
+        { position: "3a 3 N", instructions: "M" },
+        { position: "3 3 N", instructions: "Ma" },
+        { position: "999 999 W", instructions: "LMRMLM" },
         { position: "", instructions: "" },
         { position: "", instructions: "" },
         { position: "", instructions: "" },

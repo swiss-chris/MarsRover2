@@ -20,6 +20,14 @@ body {
   padding-top: 10px;
 }
 
+input {
+  font-weight: bold;
+}
+
+input::placeholder {
+  font-weight: normal;
+}
+
 input:disabled {
   color: black;
 }
