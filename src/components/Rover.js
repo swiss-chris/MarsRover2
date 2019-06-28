@@ -12,7 +12,6 @@ const Rover = props => {
           value={props.rover.position}
           onChange={props.handleChange}
           placeholder="999 999 W"
-          pattern="\d{1,3} \d{1,3} [NESW]"
           maxLength="9"
           className={
             !props.rover.position || isValidStart(props.rover.position)
@@ -28,7 +27,6 @@ const Rover = props => {
           onChange={props.handleChange}
           placeholder="LMRRMLM"
           maxLength="1000"
-          pattern="[LRM]{0,1000}"
           className={
             !props.rover.instructions ||
             isValidInstructions(props.rover.instructions)

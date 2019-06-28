@@ -10,7 +10,6 @@ const Plateau = props => {
         value={props.size}
         onChange={props.handleChange}
         placeholder="999 999"
-        pattern="\d{1,3} \d{1,3}"
         maxLength="7"
         className={isValidSize(props.size) ? "" : "error"}
       />
