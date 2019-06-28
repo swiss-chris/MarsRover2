@@ -7,14 +7,6 @@ body {
   text-align: center;
 }
 
-.grid-item input {
-  background-color: rgb(176, 216, 203);
-}
-
-.grid-item.final input {
-  background-color: rgb(93, 211, 172);
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -22,9 +14,17 @@ body {
   padding-top: 10px;
 }
 
+input:disabled {
+  color: black;
+}
+
 .grid-item input {
   width: 100%;
-  min-width: 200px;
+  background-color: rgb(176, 216, 203);
+}
+
+.grid-item.final input {
+  background-color: rgb(93, 211, 172);
 }
 
 .error {
