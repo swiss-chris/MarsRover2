@@ -1,3 +1,5 @@
+import { extractStart, extractSize } from "./converters";
+
 // TODO: reuse matchers for html input validation
 export const startMatcher = /^\d{1,3} \d{1,3} [NESW]$/;
 const instructionsMatcher = /^[LRM]{1,1000}$/;
@@ -18,3 +20,10 @@ export const isValidInstructions = instructionsString =>
   instructionsString.match(instructionsMatcher) != null;
 
 export const isValidSize = sizeString => sizeString.match(sizeMatcher) != null;
+
+export const isValidStartAndSize = (startString, sizeString) => {
+  const start = extractStart(startString);
+  const size = extractSize(sizeString);
+
+  return start.pos.x <= size.x && start.pos.y <= size.y;
+};

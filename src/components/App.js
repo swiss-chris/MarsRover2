@@ -51,6 +51,8 @@ class App extends Component {
           size={this.state.size}
           handleChange={this.handlePlateauChange}
         />
+        <br />
+        <hr />
         <Rovers
           size={this.state.size}
           rovers={this.state.rovers}

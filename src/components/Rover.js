@@ -1,7 +1,7 @@
 import React from "react";
 
 import calculateNewPosition from "../logic/movements";
-import { isValidStart, isValidInstructions } from "../logic/validators";
+import { isValidInstructions, isValidStartAndSize } from "../logic/validators";
 
 const Rover = props => {
   return (
@@ -14,7 +14,8 @@ const Rover = props => {
           placeholder="999 999 W"
           maxLength="9"
           className={
-            !props.rover.position || isValidStart(props.rover.position)
+            !props.rover.position ||
+            isValidStartAndSize(props.rover.position, props.size)
               ? ""
               : "error"
           }

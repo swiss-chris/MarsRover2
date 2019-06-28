@@ -1,4 +1,4 @@
-import { isValid, isValidStart } from "./validators";
+import { isValid, isValidStartAndSize, isValidStart } from "./validators";
 import {
   extractStart,
   extractInstructions,
@@ -13,6 +13,12 @@ const calculateNewPosition = (startString, instructionsString, sizeString) => {
     } else {
       return "";
     }
+  }
+
+  if (!isValidStartAndSize(startString, sizeString)) {
+    console.log(startString, sizeString);
+
+    return "";
   }
 
   const position = calculatePosition(
