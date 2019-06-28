@@ -1,4 +1,32 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+
+.grid-item input {
+  background-color: rgb(176, 216, 203);
+}
+
+.grid-item.final input {
+  background-color: rgb(93, 211, 172);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+  padding-top: 10px;
+}
+
+.grid-item input {
+  width: 100%;
+  min-width: 200px;
+}
+
+.error {
+  border: 2px solid red;
 }

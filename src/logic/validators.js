@@ -1,6 +1,7 @@
-const startMatcher = /\d{1,3} \d{1,3} [NESW]/;
-const instructionsMatcher = /[LRM]{1,1000}/;
-const sizeMatcher = /\d{1,3} \d{1,3}/;
+// TODO: reuse matchers for html input validation
+export const startMatcher = /^\d{1,3} \d{1,3} [NESW]$/;
+const instructionsMatcher = /^[LRM]{1,1000}$/;
+const sizeMatcher = /^\d{1,3} \d{1,3}$/;
 
 export const isValid = (startString, instructionsString, sizeString) => {
   return (
@@ -10,9 +11,10 @@ export const isValid = (startString, instructionsString, sizeString) => {
   );
 };
 
-const isValidStart = startString => startString.match(startMatcher);
+export const isValidStart = startString =>
+  startString.match(startMatcher) != null;
 
-const isValidInstructions = instructionsString =>
-  instructionsString.match(instructionsMatcher);
+export const isValidInstructions = instructionsString =>
+  instructionsString.match(instructionsMatcher) != null;
 
-const isValidSize = sizeString => sizeString.match(sizeMatcher);
+export const isValidSize = sizeString => sizeString.match(sizeMatcher) != null;

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { isValidSize } from "../logic/validators";
+
 const Plateau = props => {
   return (
     <div>
@@ -10,6 +12,7 @@ const Plateau = props => {
         placeholder="999 999"
         pattern="\d{1,3} \d{1,3}"
         maxLength="7"
+        className={isValidSize(props.size) ? "" : "error"}
       />
     </div>
   );
