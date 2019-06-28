@@ -4,7 +4,7 @@ import Rover from "./Rover";
 
 const Rovers = props => {
   return (
-    <div>
+    <div class="rovers">
       <h2>Rovers</h2>
       <div className="grid-container">
         <div className="grid-item">Position:</div>
