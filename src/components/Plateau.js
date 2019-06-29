@@ -1,11 +1,13 @@
 import React from "react";
 
 import { isValidSize } from "../logic/validators";
+import { Jumbotron } from "react-bootstrap";
 
 const Plateau = props => {
   return (
-    <div>
+    <Jumbotron>
       <h2>Plateau Size</h2>
+      <p>How large is the plateau on Mars ?</p>
       <input
         value={props.size}
         onChange={props.handleChange}
@@ -13,7 +15,7 @@ const Plateau = props => {
         maxLength="7"
         className={isValidSize(props.size) ? "" : "error"}
       />
-    </div>
+    </Jumbotron>
   );
 };
 

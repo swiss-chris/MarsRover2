@@ -7,17 +7,16 @@ import {
   isValidSize,
   isValidStart
 } from "../logic/validators";
-import { Row, Col } from "react-bootstrap";
+import { FormControl } from "react-bootstrap";
 
 const Rover = props => {
   return (
-    <Row>
-      <Col xs={4} md={4}>
-        <input
+    <tr>
+      <td>
+        <FormControl
           name="position"
           value={props.rover.position}
           onChange={props.handleChange}
-          placeholder="999 999 W"
           maxLength="9"
           className={
             !props.rover.position ||
@@ -26,10 +25,13 @@ const Rover = props => {
               ? ""
               : "error"
           }
+          placeholder="999 999 W"
+          aria-label="position"
         />
-      </Col>
-      <Col xs={4} md={4}>
-        <input
+      </td>
+
+      <td>
+        <FormControl
           name="instructions"
           value={props.rover.instructions}
           onChange={props.handleChange}
@@ -42,9 +44,10 @@ const Rover = props => {
               : "error"
           }
         />
-      </Col>
-      <Col xs={4} md={4}>
-        <input
+      </td>
+
+      <td>
+        <FormControl
           value={calculateNewPosition(
             props.rover.position,
             props.rover.instructions,
@@ -52,8 +55,8 @@ const Rover = props => {
           )}
           disabled
         />
-      </Col>
-    </Row>
+      </td>
+    </tr>
   );
 };
 

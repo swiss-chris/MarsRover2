@@ -1,32 +1,32 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 
 import Rover from "./Rover";
 
 const Rovers = props => {
   return (
-    <Container>
+    <div>
       <h2>Rovers</h2>
-      <Row>
-        <Col xs={4} md={4}>
-          Position:
-        </Col>
-        <Col xs={4} md={4}>
-          Instructions:
-        </Col>
-        <Col xs={4} md={4}>
-          Final Position:
-        </Col>
-      </Row>
-      {props.rovers.map((rover, index) => (
-        <Rover
-          key={index}
-          rover={rover}
-          size={props.size}
-          handleChange={event => props.handleChange(event, index)}
-        />
-      ))}
-    </Container>
+      <Table bordered>
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Instructions</th>
+            <th>Final Position</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.rovers.map((rover, index) => (
+            <Rover
+              key={index}
+              rover={rover}
+              size={props.size}
+              handleChange={event => props.handleChange(event, index)}
+            />
+          ))}
+        </tbody>
+      </Table>
+    </div>
   );
 };
 
