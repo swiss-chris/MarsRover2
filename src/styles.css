@@ -1,7 +1,5 @@
-input {
-  font-weight: bold;
-  outline: 0;
-  border-width: 0px;
+.rovers {
+  padding: 64px 32px;
 }
 
 table .form-control {
@@ -10,13 +8,15 @@ table .form-control {
 
 .error,
 table .error {
-  border: 2px solid red;
+  border: 2px solid red !important;
 }
 
-input::placeholder {
-  font-weight: normal;
+th:nth-child(3),
+td:nth-child(3) {
+  background-color: #eee;
 }
 
-input:disabled {
+.form-control:disabled {
+  background-color: inherit;
   color: black;
 }

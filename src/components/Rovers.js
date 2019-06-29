@@ -5,7 +5,7 @@ import Rover from "./Rover";
 
 const Rovers = props => {
   return (
-    <div>
+    <div className="px-sm-4 py-sm-5 px-xs-1 py-xs-2">
       <h2>Rovers</h2>
       <Table bordered>
         <thead>
