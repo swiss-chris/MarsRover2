@@ -2,11 +2,12 @@ import React from "react";
 
 import calculateNewPosition from "../logic/movements";
 import { isValidInstructions, isValidStartAndSize } from "../logic/validators";
+import { Row, Col } from "react-bootstrap";
 
 const Rover = props => {
   return (
-    <div className="grid-container">
-      <div className="grid-item">
+    <Row>
+      <Col xs={4} md={4}>
         <input
           name="position"
           value={props.rover.position}
@@ -20,8 +21,8 @@ const Rover = props => {
               : "error"
           }
         />
-      </div>
-      <div className="grid-item">
+      </Col>
+      <Col xs={4} md={4}>
         <input
           name="instructions"
           value={props.rover.instructions}
@@ -35,8 +36,8 @@ const Rover = props => {
               : "error"
           }
         />
-      </div>
-      <div className="grid-item final">
+      </Col>
+      <Col xs={4} md={4}>
         <input
           value={calculateNewPosition(
             props.rover.position,
@@ -45,8 +46,8 @@ const Rover = props => {
           )}
           disabled
         />
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 };
 
