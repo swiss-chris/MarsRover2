@@ -1,28 +1,37 @@
 import React from "react";
 
 import calculateNewPosition from "../logic/movements";
-import { isValidInstructions, isValidStartAndSize } from "../logic/validators";
+import {
+  isValidInstructions,
+  isValidStartAndSize,
+  isValidSize,
+  isValidStart
+} from "../logic/validators";
+import { FormControl } from "react-bootstrap";
 
 const Rover = props => {
   return (
-    <div className="grid-container">
-      <div className="grid-item">
-        <input
+    <tr>
+      <td>
+        <FormControl
           name="position"
           value={props.rover.position}
           onChange={props.handleChange}
-          placeholder="999 999 W"
           maxLength="9"
           className={
             !props.rover.position ||
-            isValidStartAndSize(props.rover.position, props.size)
+            isValidStartAndSize(props.rover.position, props.size) ||
+            (isValidStart(props.rover.position) && !isValidSize(props.size))
               ? ""
               : "error"
           }
+          placeholder="999 999 W"
+          aria-label="position"
         />
-      </div>
-      <div className="grid-item">
-        <input
+      </td>
+
+      <td>
+        <FormControl
           name="instructions"
           value={props.rover.instructions}
           onChange={props.handleChange}
@@ -35,9 +44,10 @@ const Rover = props => {
               : "error"
           }
         />
-      </div>
-      <div className="grid-item final">
-        <input
+      </td>
+
+      <td>
+        <FormControl
           value={calculateNewPosition(
             props.rover.position,
             props.rover.instructions,
@@ -45,8 +55,8 @@ const Rover = props => {
           )}
           disabled
         />
-      </div>
-    </div>
+      </td>
+    </tr>
   );
 };
 

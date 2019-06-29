@@ -1,27 +1,9 @@
-body {
-  background-color: rgb(255, 255, 255);
-}
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
-  align-content: center;
-}
-
-.rovers {
-  margin: auto;
-  width: 50%;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-column-gap: 10px;
-  padding-top: 10px;
-}
-
 input {
   font-weight: bold;
+}
+
+table .form-control {
+  border-width: 0px;
 }
 
 input::placeholder {
@@ -30,15 +12,6 @@ input::placeholder {
 
 input:disabled {
   color: black;
-}
-
-.grid-item input {
-  width: 100%;
-  background-color: rgb(176, 216, 203);
-}
-
-.grid-item.final input {
-  background-color: rgb(93, 211, 172);
 }
 
 .error {
