@@ -1,7 +1,12 @@
 import React from "react";
 
 import calculateNewPosition from "../logic/movements";
-import { isValidInstructions, isValidStartAndSize } from "../logic/validators";
+import {
+  isValidInstructions,
+  isValidStartAndSize,
+  isValidSize,
+  isValidStart
+} from "../logic/validators";
 import { Row, Col } from "react-bootstrap";
 
 const Rover = props => {
@@ -16,7 +21,8 @@ const Rover = props => {
           maxLength="9"
           className={
             !props.rover.position ||
-            isValidStartAndSize(props.rover.position, props.size)
+            isValidStartAndSize(props.rover.position, props.size) ||
+            (isValidStart(props.rover.position) && !isValidSize(props.size))
               ? ""
               : "error"
           }
