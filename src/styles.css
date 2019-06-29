@@ -1,19 +1,22 @@
-input {
-  font-weight: bold;
+.rovers {
+  padding: 64px 32px;
 }
 
 table .form-control {
   border-width: 0px;
 }
 
-input::placeholder {
-  font-weight: normal;
+.error,
+table .error {
+  border: 2px solid red !important;
 }
 
-input:disabled {
+th:nth-child(3),
+td:nth-child(3) {
+  background-color: #eee;
+}
+
+.form-control:disabled {
+  background-color: inherit;
   color: black;
-}
-
-.error {
-  border: 2px solid red;
 }

@@ -25,7 +25,7 @@ const Rover = props => {
               ? ""
               : "error"
           }
-          placeholder="999 999 W"
+          placeholder=""
           aria-label="position"
         />
       </td>
@@ -35,7 +35,7 @@ const Rover = props => {
           name="instructions"
           value={props.rover.instructions}
           onChange={props.handleChange}
-          placeholder="LMRRMLM"
+          placeholder=""
           maxLength="1000"
           className={
             !props.rover.instructions ||

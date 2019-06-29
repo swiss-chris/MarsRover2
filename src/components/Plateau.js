@@ -1,14 +1,14 @@
 import React from "react";
 
 import { isValidSize } from "../logic/validators";
-import { Jumbotron } from "react-bootstrap";
+import { Jumbotron, FormControl } from "react-bootstrap";
 
 const Plateau = props => {
   return (
-    <Jumbotron>
+    <Jumbotron className="px-sm-4 py-sm-5 px-xs-1 py-xs-2">
       <h2>Plateau Size</h2>
       <p>How large is the plateau on Mars ?</p>
-      <input
+      <FormControl
         value={props.size}
         onChange={props.handleChange}
         placeholder="999 999"
