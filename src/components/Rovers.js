@@ -10,7 +10,7 @@ const Rovers = props => {
       <Table bordered>
         <thead>
           <tr>
-            <th>Position</th>
+            <th>Initial Position</th>
             <th>Instructions</th>
             <th>Final Position</th>
           </tr>
