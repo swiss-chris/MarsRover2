@@ -8,14 +8,15 @@ table .form-control {
   border-width: 0px;
 }
 
+.error,
+table .error {
+  border: 2px solid red;
+}
+
 input::placeholder {
   font-weight: normal;
 }
 
 input:disabled {
   color: black;
-}
-
-.error {
-  border: 2px solid red;
 }
