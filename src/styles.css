@@ -1,5 +1,7 @@
 input {
   font-weight: bold;
+  outline: 0;
+  border-width: 0px;
 }
 
 table .form-control {
