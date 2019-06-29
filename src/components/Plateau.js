@@ -5,7 +5,7 @@ import { Jumbotron, FormControl } from "react-bootstrap";
 
 const Plateau = props => {
   return (
-    <Jumbotron className="px-sm-4 py-sm-5 px-xs-1 py-xs-2">
+    <Jumbotron className="px-sm-4 py-sm-5 px-3 py-4">
       <h2>Plateau Size</h2>
       <p>How large is the plateau on Mars ?</p>
       <FormControl
